@@ -1,0 +1,265 @@
+
+<html>
+<head>
+    <title>Tamizh's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #020202;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(45deg, #3c3c3ce0, #555, #3f3f3fd6);
+            background-size: 200% 200%;
+            color: #faf8f8;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: gradientFlow 5s infinite;
+        }
+        header h1 {
+            font-size: 2.2em;
+            margin: 0;
+            animation: fadeIn 2s;
+        }
+        nav {
+            margin-top: 5px;
+            animation: slideIn 2s;
+            position: relative;
+        }
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: transform 0.3s ease-in-out, color 0.3s;
+        }
+        nav a:hover {
+            transform: scaleY(1.2);
+            color: #ff0000;
+        }
+        .container {
+            display: flex;
+            margin-top: 120px;
+        }
+        .image {
+            position: fixed;
+            top: 140px;
+            left: 20px;
+            width: 350px;
+            height: auto;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeInImage 1s forwards;
+        }
+        .image:hover {
+            transform: scale(1.1);
+        }
+        .content {
+            margin-left: 400px;
+            padding: 20px;
+            flex: 1;
+        }
+        .section {
+            background: #444343;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(161, 160, 160, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s, box-shadow 0.3s ease-in-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section:hover {
+            transform: translateY(1.1);
+            box-shadow: 0 8px 15px rgba(255, 0, 0, 0.829);
+        }
+        .section h2 {
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        .section p, .section ul {
+            font-size: 1.2em;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .section ul {
+            list-style-type: square;
+        }
+        .section ul li {
+            transition: transform 0.2s ease-in-out, color 0.2s;
+        }
+        .section ul li:hover {
+            transform: scale(1.1);
+            color: #ff0000;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 7px 0;
+            margin-top: 30px;
+            animation: fadeIn 2s;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes fadeInImage {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <h1>Tamizh's Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="image">
+            
+            <img src="C:\Users\Tamizh Iniyan\Downloads\OIP.jpg" alt="Adi's Image">
+        
+        </div>
+        <div class="content">
+            <div id="about" class="section">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I'm <strong>Tamizh Iniyan</strong>, a passionate Web Designer and Developer. 
+                    I enjoy building interactive and visually appealing websites that merge creativity with functionality. I am constantly exploring new technologies and looking for ways to enhance my skill set.
+                </p>
+            </div>
+            <div id="education" class="section">
+                <h2>Education</h2>
+                <p>
+                    <strong>Bachelor of Engineering in Electronics and Communication Engineering (BE ECE)</strong><br>
+                    Sri Eshwar College of Engineering, Tamil Nadu (2022-2026)
+                </p>
+            </div>
+            <div id="skills" class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>MySQL</li>
+                    <li>C</li>
+                    <li>Front-End Development (HTML, CSS, JavaScript)</li>
+                    <li>Java</li>
+                    <li>Data Structures Using C </li>
+                </ul>
+            </div>
+            <div id="projects" class="section">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <h3>Banking System</h3>
+                        <p>Java project with MySQL integration for simulating core banking operations like account management.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Exam Cell Management System</h3>
+                        <p>Java application with a MySQL database to manage users, students, marks, and courses.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Craverse</h3>
+                        <p>A Food Recipes Sharing Community Website created with HTML,CSS and JS.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="certifications" class="section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Python (CISCO)</li>
+                    <li>Java (Udemy)</li>
+                    <li>Data Structures Using C (Udemy)</li>
+                </ul>
+            </div>
+            <div id="hobbies" class="section">
+                <h2>Hobbies</h2>
+                <p>
+                    In my free time, I enjoy:
+                </p>
+                <ul>
+                    <li>Coding and exploring new technologies</li>
+                    <li>Reading tech blogs</li>
+                    <li>Gaming</li>
+                    <li>Photography</li>
+                    <li>Traveling and experiencing new cultures</li>
+                </ul>
+            </div>
+            <div id="contact" class="section">
+                <h2>Contact Me</h2>
+                <p>
+                    <i class="fas fa-envelope"></i> Email: <a href="mailto:tamizhiniyan91@gmail.com">tamizhiniyan91@gmail.com</a><br>
+                    <i class="fab fa-linkedin"></i> LinkedIn: <a href="/*" target="_blank">Tamizh Iniyan</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Tamizh Iniyan. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      
+        function revealSections() {
+            var sections = document.querySelectorAll('.section');
+            var windowHeight = window.innerHeight;
+
+            sections.forEach(function(section) {
+                var sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < windowHeight * 0.8) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+    </script>
+</body>
+</html>
